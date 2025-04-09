@@ -13,7 +13,21 @@ router.post('/', async (req, res) => {
         res.status(500).json({ error: 'Booking failed', details: err });
     }
 });
-
+// await axios.post('http://localhost:5000/api/bookings', {
+//     ...form,
+//     selectedDate: form.selectedDate.toISOString(), // convert to string
+//     packageId,
+//   });
+  
+// await axios.post('http://localhost:5000/api/bookings', {
+//     name: form.name,
+//     email: form.email,
+//     checkInDate: form.checkInDate,
+//     checkOutDate: form.checkOutDate,
+//     totalMembers: form.totalMembers,
+//     packageId
+//   });
+  
 // Delete a booking by ID
 router.delete('/:id', async (req, res) => {
     try {
